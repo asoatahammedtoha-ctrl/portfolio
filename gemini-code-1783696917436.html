@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Video Editor | Portfolio</title>
+    <!-- Tailwind CSS for sleek utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration for Premium Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0A0A0C',      /* Deep cinematic black */
+                            card: '#121216',    /* Elevated slate black */
+                            accent: '#E50914',  /* High-contrast director red */
+                            muted: '#8E8E93'    /* Neutral premium gray */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Inter Font & Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0C;
+            scroll-behavior: smooth;
+        }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #222226;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E50914;
+        }
+    </style>
+</head>
+<body class="text-white antialiased selection:bg-brand-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-bg/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-widest uppercase group">
+                Alex<span class="text-brand-accent group-hover:animate-pulse">.</span>Visuals
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-brand-muted">
+                <a href="#showreel" class="hover:text-white transition-colors">Showreel</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#contact" class="px-4 py-2 border border-brand-accent text-white rounded-sm hover:bg-brand-accent transition-all duration-300">Get in Touch</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-white/5 px-6 py-4 space-y-4 text-center">
+            <a href="#showreel" class="block text-brand-muted hover:text-white py-2">Showreel</a>
+            <a href="#projects" class="block text-brand-muted hover:text-white py-2">Projects</a>
+            <a href="#services" class="block text-brand-muted hover:text-white py-2">Services</a>
+            <a href="#skills" class="block text-brand-muted hover:text-white py-2">Skills</a>
+            <a href="#contact" class="block bg-brand-accent text-white py-2 rounded-sm font-medium">Get in Touch</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20">
+        <!-- Background Gradient Glows -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-4xl text-center z-10 space-y-6">
+            <span class="text-brand-accent uppercase tracking-[0.3em] text-xs font-bold block animate-fade-in">Professional Video Editor & Colorist</span>
+            <h1 class="text-4xl md:text-7xl font-bold tracking-tight leading-none">
+                Crafting Visual Stories <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-muted to-white/40">With Cinematic Precision</span>
+            </h1>
+            <p class="text-brand-muted text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed">
+                Transforming raw footage into high-impact, premium narratives for commercial brands, documentaries, and digital creators.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#showreel" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-semibold rounded-sm hover:bg-brand-accent hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                    <i data-lucide="play" class="w-4 h-4 fill-current"></i> Watch Showreel
+                </a>
+                <a href="#projects" class="w-full sm:w-auto px-8 py-4 bg-brand-card border border-white/10 text-white font-medium rounded-sm hover:border-white/30 transition-all duration-300">
+                    View Portfolio
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2 text-brand-muted opacity-60">
+            <span class="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
+            <div class="w-[1px] h-12 bg-gradient-to-b from-brand-muted to-transparent"></div>
+        </div>
+    </section>
+
+    <hr class="border-white/5 max-w-7xl mx-auto">
+
+    <!-- Showreel Section -->
+    <section id="showreel" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">2026 Reel</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">The Showreel</h2>
+        </div>
+        
+        <!-- Interactive Video Wrapper -->
+        <div class="relative aspect-video w-full max-w-5xl mx-auto bg-brand-card border border-white/5 rounded-sm overflow-hidden shadow-2xl group">
+            <iframe 
+                class="absolute inset-0 w-full h-full" 
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ" <!-- Replace with your actual showreel ID -->
+                title="Video Editor Showreel" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects" class="py-24 bg-brand-card/30 border-y border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Selected Work</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2">Featured Projects</h2>
+                </div>
+                <p class="text-brand-muted max-w-md font-light text-sm md:text-base">
+                    A curated selection of commercial work, cinematic narratives, and high-production content.
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-brand-card border border-white/5 rounded-sm overflow-hidden flex flex-col justify-between">
+                    <div class="aspect-video w-full bg-black relative">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <span class="text-xs text-brand-accent uppercase tracking-wider font-semibold">Commercial</span>
+                        <h3 class="text-xl font-bold">Urban Exploration - Brand Campaign</h3>
+                        <p class="text-brand-muted text-sm font-light">Pacing, sound design, and color grading optimized for a dynamic luxury streetwear launch.</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-brand-card border border-white/5 rounded-sm overflow-hidden flex flex-col justify-between">
+                    <div class="aspect-video w-full bg-black relative">
+                        <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Project 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <span class="text-xs text-brand-accent uppercase tracking-wider font-semibold">Cinematic Short</span>
+                        <h3 class="text-xl font-bold">Chasing Light - Mini Documentary</h3>
+                        <p class="text-brand-muted text-sm font-light">A profound human-interest story requiring meticulous narrative structuring and emotional pacing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Expertise</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">Post-Production Services</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service 1 -->
+            <div class="p-8 bg-brand-card border border-white/5 rounded-sm hover:border-white/10 transition-all duration-300 space-y-4 group">
+                <div class="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                    <i data-lucide="film" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-lg font-bold">Creative Editing</h3>
+                <p class="text-brand-muted text-xs font-light leading-relaxed">Assembling high-impact narratives, matching pacing to tone, and driving emotional engagement.</p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="p-8 bg-brand-card border border-white/5 rounded-sm hover:border-white/10 transition-all duration-300 space-y-4 group">
+                <div class="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                    <i data-lucide="sliders" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-lg font-bold">Color Grading</h3>
+                <p class="text-brand-muted text-xs font-light leading-relaxed">Color correction, custom LUT generation, and Hollywood-level stylized cinematic grading.</p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="p-8 bg-brand-card border border-white/5 rounded-sm hover:border-white/10 transition-all duration-300 space-y-4 group">
+                <div class="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                    <i data-lucide="volume-2" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-lg font-bold">Sound Design</h3>
+                <p class="text-brand-muted text-xs font-light leading-relaxed">Immersive soundscapes, audio cleanup, dialogue leveling, and rhythmic SFX integration.</p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="p-8 bg-brand-card border border-white/5 rounded-sm hover:border-white/10 transition-all duration-300 space-y-4 group">
+                <div class="w-12 h-12 rounded-sm bg-white/5 flex items-center justify-center text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-lg font-bold">Motion Graphics</h3>
+                <p class="text-brand-muted text-xs font-light leading-relaxed">Minimalist titles, kinetic typography, dynamic transitions, and polished UI animations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software & Skills Section -->
+    <section id="skills" class="py-24 bg-brand-card/30 border-t border-white/5 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">The Toolkit</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2">Software Mastery</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2 p-4 border border-white/5 bg-brand-bg rounded-sm">
+                    <div class="text-sm font-bold tracking-wider">Premiere Pro</div>
+                    <div class="text-xs text-brand-muted">Advanced / Longform & Commercial</div>
+                </div>
+                <div class="space-y-2 p-4 border border-white/5 bg-brand-bg rounded-sm">
+                    <div class="text-sm font-bold tracking-wider text-[#8656FF]">DaVinci Resolve</div>
+                    <div class="text-xs text-brand-muted">Advanced / Color & Grading</div>
+                </div>
+                <div class="space-y-2 p-4 border border-white/5 bg-brand-bg rounded-sm">
+                    <div class="text-sm font-bold tracking-wider">After Effects</div>
+                    <div class="text-xs text-brand-muted">Intermediate / VFX & Titles</div>
+                </div>
+                <div class="space-y-2 p-4 border border-white/5 bg-brand-bg rounded-sm">
+                    <div class="text-sm font-bold tracking-wider">Avid Media Composer</div>
+                    <div class="text-xs text-brand-muted">Industry Standard Workflow</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Collaboration</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2">Let's Create Something Memorable</h2>
+            <p class="text-brand-muted font-light text-sm mt-4 max-w-md mx-auto">
+                Have an upcoming campaign, documentary, or project? Drop a message and let's discuss details.
+            </p>
+        </div>
+
+        <form class="space-y-6 bg-brand-card p-8 md:p-10 border border-white/5 rounded-sm shadow-xl" onsubmit="event.preventDefault(); alert('Message sent simulated!');">
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label class="text-xs uppercase tracking-wider text-brand-muted font-medium">Name</label>
+                    <input type="text" required class="w-full bg-brand-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent transition-colors">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-xs uppercase tracking-wider text-brand-muted font-medium">Email Address</label>
+                    <input type="email" required class="w-full bg-brand-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent transition-colors">
+                </div>
+            </div>
+            <div class="space-y-2">
+                <label class="text-xs uppercase tracking-wider text-brand-muted font-medium">Project Type</label>
+                <select class="w-full bg-brand-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-brand-muted focus:outline-none focus:border-brand-accent transition-colors">
+                    <option>Commercial / Advertisement</option>
+                    <option>Cinematic Short / Documentary</option>
+                    <option>Music Video</option>
+                    <option>Social Content / Branding</option>
+                </select>
+            </div>
+            <div class="space-y-2">
+                <label class="text-xs uppercase tracking-wider text-brand-muted font-medium">Project Details</label>
+                <textarea rows="5" required class="w-full bg-brand-bg border border-white/10 rounded-sm px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-accent transition-colors resize-none" placeholder="Describe the timeline, aesthetic scope, and goals..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-white text-black font-bold text-sm tracking-wide py-4 uppercase rounded-sm hover:bg-brand-accent hover:text-white transition-all duration-300">
+                Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-8 text-center text-xs text-brand-muted">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>&copy; 2026 Alex Visuals. All Rights Reserved.</div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Vimeo</a>
+                <a href="#" class="hover:text-white transition-colors">YouTube</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-white transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Navigation Control -->
+    <script>
+        // Lucide Icon Initializer
+        lucide.createIcons();
+
+        // Responsive Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
